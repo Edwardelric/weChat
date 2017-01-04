@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#0c5ebc",
+    "navigationBarTitleText": "Edward-知乎",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar":{
+    "color": "#353535",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页"
+      }, 
+      {
+        "pagePath": "pages/discover/discover",
+        "iconPath": "images/icon_component.png",
+        "selectedIconPath": "images/icon_component_HL.png",
+        "text": "主题日报"
+      },
+      {
+        "pagePath": "pages/notice",
+        "iconPath": "images/icon_component.png",
+        "selectedIconPath": "images/icon_component_HL.png",
+        "text": "主题日报"
+      }
+    ]
+  }
+}
