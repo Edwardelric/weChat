@@ -1,13 +1,14 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/account/account"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#0c5ebc",
     "navigationBarTitleText": "Edward-知乎",
-    "navigationBarTextStyle":"#fff"
+    "navigationBarTextStyle":"#fff",
+    "enablePullDownRefresh":true
   },
   "tabBar":{
     "color": "#353535",
@@ -22,7 +23,7 @@
         "selectedIconPath": "./images/tabbar/book_active.png"
       },
       {
-        "pagePath": "pages/index1/index",
+        "pagePath": "pages/index/index",
         "iconPath": "./images/tabbar/compass.png",
         "selectedIconPath": "./images/tabbar/compass_active.png"
       },

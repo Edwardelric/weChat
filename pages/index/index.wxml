@@ -9,7 +9,6 @@
         <text wx:if="{{index<hotBtn.length-1}}">|</text>
     </block>
 </view>
-
 <view>
    <swiper autoplay="true" indicator-dots="true" interval="3000" vertical="true">
         <swiper-item wx:for="{{imgUrls}}" wx:key="*this">
@@ -17,11 +16,28 @@
         </swiper-item>
    </swiper>
 </view>
-<view class="artical-list">
-    <view wx:for="{{articalList}}" wx:key="*this" class="artical-item">
-        <view class="avator"><image src="{{item.avator.img}}" mode="scaleToFill" class="avator-image"></image>{{item.avator.name}}</view>
-        <view class="artical-image"><image src="{{item.abstractImg}}" wx:if="{{item.abstractImg}}" mode="scaleToFill"></image></view>
-        <view class="title">{{item.title}}</view>
-        <view class="artical-abstract">{{item.abstract}}</view>
+<view class="article-list">
+    <view wx:for="{{articleList}}" wx:key="*this" class="article-item">
+        <navigator url="/pages/account/account?id={{item.id}}">
+          <view class="flex">
+            <view class="avator">
+              <image src="{{item.avator.img}}" mode="scaleToFill" class="avator-image"></image>{{item.avator.name}}
+            </view>
+            <view class="time text-right">{{item.avator.time}}</view>
+          </view>
+          <view class="article-image"><image src="{{item.abstractImg}}" wx:if="{{item.abstractImg}}" mode="scaleToFill"></image></view>
+          <view class="title">{{item.title}}</view>
+          <view class="article-abstract">{{item.abstract}}</view>
+          <view class="flex remarks">
+            <view class="flex-item" wx:if="{{item.remarks && item.remarks*1>0}}">评论数
+              <view>{{item.remarks}}</view>
+            </view>
+            <view class="flex-item text-right" wx:if="{{item.collections && item.collections*1>0}}">收藏
+              <view>{{item.collections}}</view>
+            </view>
+          </view>
+        </navigator>
     </view>
 </view>
+
+

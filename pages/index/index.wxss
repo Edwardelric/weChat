@@ -28,24 +28,48 @@ swiper{
 swiper image{
     width:100%;
 }
-.artical-list{
+.article-list{
     margin:10px auto;
 }
-.artical-item{
+.article-item{
     margin-bottom:20rpx;
     padding:20rpx;
     background:#fff;
     font-size:14px;
 }
-.artical-item .avator-image{
+.article-item .avator{
+    margin-bottom:4px;
+}
+.article-item .avator-image{
     width:40rpx;
     height:40rpx;
+    margin-right:10px;
     border-radius:20rpx;
+    border:1rpx solid #ccc;
     vertical-align:middle;
 }
-.artical-item .artical-image{
+.article-item .article-image{
     text-align:center;
 }
-.artical-item .artical-image image{
+.article-item .article-image image{
     width:100%;
+}
+.article-item .title{
+    padding:4px 0;
+    font-weight:bolder;
+}
+.article-item .article-abstract{
+    line-height:26px;
+}
+.article-item .remarks{
+    margin-top:10px;
+}
+.article-item .remarks .flex-item{
+    flex:1;
+    color:#ccc;
+}
+.article-item .remarks view view{
+    display:inline-block;
+    font-weight:bolder;
+    color:#cc0000;
 }
