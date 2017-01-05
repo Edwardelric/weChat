@@ -13,24 +13,40 @@
     "color": "#353535",
     "selectedColor": "#3cc51f",
     "borderStyle": "white",
-    "backgroundColor": "#fff",
+    "backgroundColor": "#f7f7f7",
+    "position":"bottom",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "主页"
+        "iconPath": "pages/images/tabbar/book.png",
+        "selectedIconPath": "pages/images/tabbar/book_active.png"
       }, 
       {
         "pagePath": "pages/discover/discover",
-        "iconPath": "images/icon_component.png",
-        "selectedIconPath": "images/icon_component_HL.png",
-        "text": "主题日报"
+        "iconPath": "pages/images/tabbar/compass.png",
+        "selectedIconPath": "pages/images/tabbar/compass_active.png"
       },
       {
-        "pagePath": "pages/notice",
-        "iconPath": "images/icon_component.png",
-        "selectedIconPath": "images/icon_component_HL.png",
-        "text": "主题日报"
+        "pagePath": "pages/notice/notice",
+        "iconPath": "pages/images/tabbar/bell.png",
+        "selectedIconPath": "pages/images/tabbar/bell_active.png"
+      },
+      {
+        "pagePath": "pages/msg/msg",
+        "iconPath": "pages/images/tabbar/msg.png",
+        "selectedIconPath": "pages/images/tabbar/msg_active.png"
+      },
+      {
+        "pagePath": "pages/more/more",
+        "iconPath": "pages/images/tabbar/more.png",
+        "selectedIconPath": "pages/images/tabbar/more_active.png"
       }
     ]
+  },
+  "networkTimeout":{
+    "request": 60000,
+    "connectSocket": 60000,
+    "uploadFile": 60000,
+    "downloadFile": 60000
   }
 }

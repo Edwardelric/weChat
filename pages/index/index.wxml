@@ -1,10 +1,21 @@
 <!--index.wxml-->
-<view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<view class="body">
+    <view class="flex search">
+      <input password type="text" placeholder="搜索问答、文章、话题或用户"/>
+      <icon type="search" />
+    </view>
+    <view class="flex hot-btn">
+      <block wx:for="{{hotBtn}}" wx:key="*this">
+          <text class="hot-btn-item text-center">{{item}}</text>
+          <text wx:if="{{index<hotBtn.length-1}}">|</text>
+      </block>
+    </view>
+    <view class="artical-list">
+        <view wx:for="{{articalList}}" wx:key="*this" class="artical-item">
+            <view class="avator"><image src="{{item.avator.img}}" mode="scaleToFill" class="avator-image"></image>{{item.avator.name}}</view>
+            <view class="artical-image"><image src="{{item.abstractImg}}" wx:if="{{item.abstractImg}}" mode="scaleToFill"></image></view>
+            <view class="title">{{item.title}}</view>
+            <view class="artical-abstract">{{item.abstract}}</view>
+        </view>
+    </view>
 </view>
