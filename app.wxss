@@ -1,4 +1,31 @@
 /**app.wxss**/
+page{
+    background:#ccc;
+    color:#908e8e;
+    font-size:14px;
+    font-family:Miicrosoft Yahei;
+}
+.white{
+    background:#fff;
+}
+.gray{
+    background:#ccc;
+}
+.black{
+    background:#000;
+}
+.text-center{
+    text-align:center;
+}
+.flex{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:stretch;
+}
+input{
+    background:#ccc;
+}
 .container {
   height: 100%;
   display: flex;
@@ -7,4 +34,4 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}

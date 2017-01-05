@@ -1,40 +1,39 @@
-{
+module.exports = {
   "articalList":[
     {
       "avator":{
-        "name":"张三",
+        "name":"张三1",
         "img":"http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"
       },
-      "img":"http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg",
+      "abstractImg":"http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg",
       "title":"印度神话专题-湿婆的冷漠",
       "abstract":"印度神话专题-湿婆的冷漠的简介打发撒打算发印度神话专题-湿婆的冷漠的简介打发撒打算发印度神话专题-湿婆的冷漠的简介打发撒打算发"
     },
     {
       "avator":{
         "name":"李四",
-        "img":"http://img02.tooopen.com/images/20150928/tooopen_sy_175866434296.jpg"
+        "img":"http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"
       },
-      "img":"http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg",
       "title":"印度神话专题-湿婆的冷漠",
       "abstract":"印度神话专题-湿婆的冷漠的简介打发撒打算发印度神话专题-湿婆的冷漠的简介打发撒打算发印度神话专题-湿婆的冷漠的简介打发撒打算发"
     },
     {
       "avator":{
         "name":"赵武",
-        "img":"http://img02.tooopen.com/images/20150928/tooopen_sy_175866434296.jpg"
+        "img":"http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"
       },
-      "img":"http://img02.tooopen.com/images/20150928/tooopen_sy_175866434296.jpg",
+      "abstractImg":"http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg",
       "title":"12印度神话专题-湿婆的冷漠",
       "abstract":"印度神话专题-湿婆的冷漠的简介打发撒打算发印度神话专题-湿婆的冷漠的简介打发撒打算发印度神话专题-湿婆的冷漠的简介打发撒打算发"
     },
     {
       "avator":{
         "name":"老六",
-        "img":"http://img02.tooopen.com/images/20150928/tooopen_sy_175833047715.jpg"
+        "img":"http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"
       },
-      "img":"http://img02.tooopen.com/images/20150928/tooopen_sy_175833047715.jpg",
+      "abstractImg":"http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg",
       "title":"12印度神话专题-湿婆的冷漠",
       "abstract":"印度神话专题-湿婆的冷漠的简介打发撒打算发印度神话专题-湿婆的冷漠的简介打发撒打算发印度神话专题-湿婆的冷漠的简介打发撒打算发"
     }
   ]
-}
+};

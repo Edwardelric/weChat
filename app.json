@@ -18,28 +18,28 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "images/tabbar/book.png",
-        "selectedIconPath": "images/tabbar/book_active.png"
-      }, 
-      {
-        "pagePath": "pages/discover/discover",
-        "iconPath": "images/tabbar/compass.png",
-        "selectedIconPath": "images/tabbar/compass_active.png"
+        "iconPath": "./images/tabbar/book.png",
+        "selectedIconPath": "./images/tabbar/book_active.png"
       },
       {
-        "pagePath": "pages/notice/notice",
-        "iconPath": "images/tabbar/bell.png",
-        "selectedIconPath": "images/tabbar/bell_active.png"
+        "pagePath": "pages/index1/index",
+        "iconPath": "./images/tabbar/compass.png",
+        "selectedIconPath": "./images/tabbar/compass_active.png"
       },
       {
-        "pagePath": "pages/msg/msg",
-        "iconPath": "images/tabbar/msg.png",
-        "selectedIconPath": "images/tabbar/msg_active.png"
+        "pagePath": "pages/index/index",
+        "iconPath": "./images/tabbar/bell.png",
+        "selectedIconPath": "./images/tabbar/bell_active.png"
       },
       {
-        "pagePath": "pages/more/more",
-        "iconPath": "images/tabbar/more.png",
-        "selectedIconPath": "images/tabbar/more_active.png"
+        "pagePath": "pages/index/index",
+        "iconPath": "./images/tabbar/msg.png",
+        "selectedIconPath": "./images/tabbar/msg_active.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./images/tabbar/more.png",
+        "selectedIconPath": "./images/tabbar/more_active.png"
       }
     ]
   },
