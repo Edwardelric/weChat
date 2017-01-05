@@ -8,7 +8,7 @@
     flex:1;
     margin:0 10px;
     padding-left:20px;
-    background:#ccc url('../images/tabbar/bell_active.png') no-repeat left center;
+    background:#ccc url('../../images/tabbar/bell_active.png') no-repeat left center;
     font-size:14px;
 }
 .hot-btn{
