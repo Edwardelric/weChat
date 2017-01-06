@@ -7,12 +7,7 @@ Page({
       '分享'
     ],
     userInfo: {},
-    articleList: [],
-    imgUrls: [
-        '/images/swiper/0.jpeg',
-        '/images/swiper/0.jpeg',
-        '/images/swiper/0.jpeg'
-    ]
+    articleList: []
   },
   onLoad() {
     console.log('onload mock数据');
@@ -20,9 +15,9 @@ Page({
       articleList: require('../../data/list.js').articleList
     });
     console.log('onload完成');
-    wx.navigateTo({
-      url: '/pages/article/article?id=1'
-    });
+    // wx.navigateTo({
+    //   url: '/pages/article/article?id=1'
+    // });
   },
   onUnload() {
     console.log('unload');

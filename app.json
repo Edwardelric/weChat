@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/discovery/discovery",
     "pages/index/index",
     "pages/article/article"
   ],
@@ -23,7 +24,7 @@
         "selectedIconPath": "images/tabbar/index_focus.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/discovery/discovery",
         "iconPath": "images/tabbar/discovery.png",
         "selectedIconPath": "images/tabbar/discovery_focus.png"
       },

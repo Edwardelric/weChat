@@ -11,8 +11,10 @@
 </view>
 <view>
    <swiper autoplay="true" indicator-dots="true" interval="3000" vertical="true">
-        <swiper-item wx:for="{{imgUrls}}" wx:key="*this">
-            <image src="{{item}}"></image>
+        <swiper-item wx:for="{{articleList}}" wx:key="*this">
+            <navigator url="/pages/article/article?id={{item.id}}">
+              <image src="{{item.abstractImg}}" mode="scaleToFill"></image>
+            </navigator>
         </swiper-item>
    </swiper>
 </view>
