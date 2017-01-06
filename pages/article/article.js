@@ -1,37 +1,30 @@
 Page({
   data:{
-    id: ''
+    articleData: {},
+    id: 'articleId'
   },
-  onLoad:function(options){
+  onLoad(options) {
     // 生命周期函数--监听页面加载
+    let data = require('../../data/article.js').articleList;
+    let articleData = data[options.id*1];
+    if (!articleData) { return false;}
+    if (wx.getStorageSync('articleId_'+options.id*1) === 'true') {
+      articleData.collected = true;
+    }
     this.setData({
-      id: options.id
+      articleData: articleData,
+      id: 'articleId_'+options.id*1
+    });  
+  },
+  collectionHandler(event) {
+    let articleData = this.data.articleData;
+    articleData.collected = !articleData.collected;
+    this.setData({
+      'articleData': articleData
     });
+    wx.setStorageSync(this.data.id,'true');
   },
-  onReady:function(){
-    // 生命周期函数--监听页面初次渲染完成
-  },
-  onShow:function(){
-    // 生命周期函数--监听页面显示
-     
-  },
-  onHide:function(){
-    // 生命周期函数--监听页面隐藏
-     
-  },
-  onUnload:function(){
-    // 生命周期函数--监听页面卸载
-     
-  },
-  onPullDownRefresh: function() {
-    // 页面相关事件处理函数--监听用户下拉动作
-       
-  },
-  onReachBottom: function() {
-    // 页面上拉触底事件的处理函数
-     
-  },
-  onShareAppMessage: function() {
+  onShareAppMessage() {
     // 用户点击右上角分享
     return {
       title: 'title', // 分享标题
@@ -39,4 +32,4 @@ Page({
       path: 'path' // 分享路径
     }
   }
-})
+});

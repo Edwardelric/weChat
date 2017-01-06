@@ -1,20 +1,21 @@
 <template name="articleTpl">
 	<view class="article-container">
-		<image class="head-image"src="/images/swiper/0.jpeg"></image>
+		<image class="head-image" src="{{abstractImg}}"></image>
 		<view class="author-data">
-			<image class="avatar" src="/images/avatar/2.jpg"></image>
-			<text class="author">胡歌</text>
+			<image class="avatar" src="{{avatar.img}}"></image>
+			<text class="author">{{avatar.name}}</text>
 			<text class="const-text">发表于:</text>
-			<text class="data">三天前</text>
+			<text class="data">{{avatar.time}}</text>
 		</view>
-		<view class="title">游戏好玩吗</view>
+		<view class="title">{{title}}</view>
 		<view class="flex tool">
 			<view class="line"></view>
-			<image src="/images/icon/collection.png"></image>
+			<image wx:if="{{collected}}" src="/images/icon/collection_active.png"></image>
+			<image wx:else src="/images/icon/collection.png" catchtap="collectionHandler"></image>
 			<image src="/images/icon/share.png"></image>
 		</view>
 		<view class="content">
-			<text>具体文章的内容的内容具体文章的内容的内容具体文章的内容的内容具体文章的内容的内容</text>
+			<text>{{content}}</text>
 		</view>
 	</view>
 </template>

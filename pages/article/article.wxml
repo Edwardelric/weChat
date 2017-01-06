@@ -1,4 +1,4 @@
 <import src="../tpl/articletpl.wxml" />
 <view>
-	<template is="articleTpl"></template>
+	<template is="articleTpl" data="{{...articleData}}"></template>
 </view>
