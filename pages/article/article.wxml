@@ -1,4 +1,8 @@
 <import src="../tpl/articletpl.wxml" />
 <view>
 	<template is="articleTpl" data="{{...articleData}}"></template>
+	<view class="flex video">
+		<image wx:if="{{isPlay}}" src="/images/icon/music-stop.png" catchtap="musicHandler"></image>
+		<image wx:else src="/images/icon/music-start.png" catchtap="musicHandler"></image>
+	</view>
 </view>

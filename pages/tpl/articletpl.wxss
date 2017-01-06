@@ -51,5 +51,5 @@ page{
 .content{
   margin:10rpx;
   line-height:26px;
-  text-indent:30rpx;
+  text-indent:28px;
 }

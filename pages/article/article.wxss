@@ -1,1 +1,14 @@
 @import "../tpl/articletpl.wxss";
+.video{
+  position:fixed;
+  bottom:0;
+  right:0;
+  width:100%;
+  flex-direction:row-reverse; 
+  margin:20rpx;	
+}
+.video image{
+  width:60rpx;
+  height:60rpx;	
+  text-align:right;
+}
