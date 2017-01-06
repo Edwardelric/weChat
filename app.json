@@ -1,7 +1,7 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/account/account"
+    "pages/article/article"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -19,28 +19,28 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "./images/tabbar/book.png",
-        "selectedIconPath": "./images/tabbar/book_active.png"
+        "iconPath": "images/tabbar/index.png",
+        "selectedIconPath": "images/tabbar/index_focus.png"
       },
       {
         "pagePath": "pages/index/index",
-        "iconPath": "./images/tabbar/compass.png",
-        "selectedIconPath": "./images/tabbar/compass_active.png"
+        "iconPath": "images/tabbar/discovery.png",
+        "selectedIconPath": "images/tabbar/discovery_focus.png"
       },
       {
         "pagePath": "pages/index/index",
-        "iconPath": "./images/tabbar/bell.png",
-        "selectedIconPath": "./images/tabbar/bell_active.png"
+        "iconPath": "images/tabbar/ring.png",
+        "selectedIconPath": "images/tabbar/ring_focus.png"
       },
       {
         "pagePath": "pages/index/index",
-        "iconPath": "./images/tabbar/msg.png",
-        "selectedIconPath": "./images/tabbar/msg_active.png"
+        "iconPath": "images/tabbar/chat.png",
+        "selectedIconPath": "images/tabbar/chat_focus.png"
       },
       {
         "pagePath": "pages/index/index",
-        "iconPath": "./images/tabbar/more.png",
-        "selectedIconPath": "./images/tabbar/more_active.png"
+        "iconPath": "images/tabbar/book.png",
+        "selectedIconPath": "images/tabbar/book_focus.png"
       }
     ]
   },

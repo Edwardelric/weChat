@@ -1,12 +1,15 @@
 Page({
-  data:{},
+  data:{
+    id: ''
+  },
   onLoad:function(options){
     // 生命周期函数--监听页面加载
-    
+    this.setData({
+      id: options.id
+    });
   },
   onReady:function(){
     // 生命周期函数--监听页面初次渲染完成
-    
   },
   onShow:function(){
     // 生命周期函数--监听页面显示

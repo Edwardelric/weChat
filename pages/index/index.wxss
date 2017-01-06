@@ -7,7 +7,7 @@
     flex:1;
     margin:0 20rpx;
     padding-left:40rpx;
-    background:#ccc url('/images/tabbar/bell_active.png') no-repeat left center;
+    background:#ccc url('/images/tabbar/ring_focus.png') no-repeat left center;
     font-size:14px;
 }
 .hot-btn{
@@ -37,10 +37,10 @@ swiper image{
     background:#fff;
     font-size:14px;
 }
-.article-item .avator{
+.article-item .avatar{
     margin-bottom:4px;
 }
-.article-item .avator-image{
+.article-item .avatar-image{
     width:40rpx;
     height:40rpx;
     margin-right:10px;

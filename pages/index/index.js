@@ -1,7 +1,3 @@
-//index.js
-//获取应用实例
-let mock = require('../../mock.js');
-console.log(mock);
 let app = getApp();
 Page({
   data: {
@@ -11,25 +7,22 @@ Page({
       '分享'
     ],
     userInfo: {},
-    articleList: mock.articleList,
+    articleList: [],
     imgUrls: [
-        '/images/swiper/0.jpg',
-        '/images/swiper/1.jpg',
-        '/images/swiper/2.jpg'
+        '/images/swiper/0.jpeg',
+        '/images/swiper/0.jpeg',
+        '/images/swiper/0.jpeg'
     ]
   },
   onLoad() {
+    console.log('onload mock数据');
+    this.setData({
+      articleList: require('../../data/list.js').articleList
+    });
     console.log('onload完成');
-    //调用应用实例的方法获取全局数据
-    // wx.request({
-    //   url:'mock',
-    //   header: {
-    //     'content-type': 'application/json'
-    //   },
-    //   success(response) {
-    //     consle.log('0');
-    //   }
-    // });
+    wx.navigateTo({
+      url: '/pages/article/article?id=1'
+    });
   },
   onUnload() {
     console.log('unload');

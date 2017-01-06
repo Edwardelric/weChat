@@ -1,0 +1,52 @@
+.article-container{
+  background: #fff;
+}
+.head-image {
+  width:100%;
+}
+.author-data{
+  margin:10rpx 0;
+}
+.avatar {
+  height: 64rpx;
+  width: 64rpx;
+  margin-left: 20px;
+  border:1px solid #ccc;
+  border-radius:32px;
+  vertical-align: middle;
+}
+.author {
+  font-size: 14px;
+  font-weight: bolder;
+  margin:0 20rpx;
+  color: #666;
+}
+.const-text {
+  font-size: 14px;
+  color: #999;
+}
+.title {
+  margin-left: 20px;
+  margin-top:30rpx;
+  margin-bottom:30rpx;
+  font-size: 18px;
+  font-weight: bolder;
+  color: #4b556c;
+}
+.tool image{
+	width:60rpx;
+	height:60rpx;
+	margin-right:10rpx;
+	vertical-align:middle;
+}
+.line{
+	height:1px;
+	margin-top:28rpx;
+ 	margin-left: 20px;
+	border-top:1px solid #ccc;
+	flex:1;
+}
+.content{
+	margin:10px 20px;
+	line-height:20px;
+}

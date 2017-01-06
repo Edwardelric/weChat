@@ -18,12 +18,12 @@
 </view>
 <view class="article-list">
     <view wx:for="{{articleList}}" wx:key="*this" class="article-item">
-        <navigator url="/pages/account/account?id={{item.id}}">
+        <navigator url="/pages/article/article?id={{item.id}}">
           <view class="flex">
-            <view class="avator">
-              <image src="{{item.avator.img}}" mode="scaleToFill" class="avator-image"></image>{{item.avator.name}}
+            <view class="avatar">
+              <image src="{{item.avatar.img}}" mode="scaleToFill" class="avatar-image"></image>{{item.avatar.name}}
             </view>
-            <view class="time text-right">{{item.avator.time}}</view>
+            <view class="time text-right">{{item.avatar.time}}</view>
           </view>
           <view class="article-image"><image src="{{item.abstractImg}}" wx:if="{{item.abstractImg}}" mode="scaleToFill"></image></view>
           <view class="title">{{item.title}}</view>

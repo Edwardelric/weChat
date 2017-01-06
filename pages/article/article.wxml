@@ -1,0 +1,4 @@
+<import src="../tpl/articletpl.wxml" />
+<view>
+	<template is="articleTpl"></template>
+</view>
