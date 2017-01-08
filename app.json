@@ -2,7 +2,8 @@
   "pages":[
     "pages/discovery/discovery",
     "pages/index/index",
-    "pages/article/article"
+    "pages/article/article",
+    "pages/chat/chat"
   ],
   "window":{
     "backgroundTextStyle":"light",

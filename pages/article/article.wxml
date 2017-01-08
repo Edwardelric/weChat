@@ -1,4 +1,4 @@
-<import src="../tpl/articletpl.wxml" />
+<import src="../../tpl/articletpl/articletpl.wxml" />
 <view>
 	<template is="articleTpl" data="{{...articleData}}"></template>
 	<view class="flex video">

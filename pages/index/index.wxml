@@ -20,7 +20,7 @@
 </view>
 <view class="article-list">
     <view wx:for="{{articleList}}" wx:key="*this" class="article-item">
-        <navigator url="/pages/article/article?id={{item.id}}">
+        <navigator url="/pages/article/article?id={{item.id}}" open-type="redirect">
           <view class="flex">
             <view class="avatar">
               <image src="{{item.avatar.img}}" mode="scaleToFill" class="avatar-image"></image>{{item.avatar.name}}

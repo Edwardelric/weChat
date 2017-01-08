@@ -1,3 +1,4 @@
+<import src="../../tpl/discovery/discoverytpl.wxml" />
 <view>
-  <text>discovery</text>
+	<template is="discovery"></template>
 </view>

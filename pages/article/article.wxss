@@ -1,4 +1,4 @@
-@import "../tpl/articletpl.wxss";
+@import "../../tpl/articletpl/articletpl.wxss";
 .video{
   position:fixed;
   bottom:0;
