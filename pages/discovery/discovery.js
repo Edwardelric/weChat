@@ -1,35 +1,54 @@
 let app = getApp();
 Page({
   data:{
-     
+    playingData: [],
+    laterData: [],
+    topData: [],
+    startStep: 0
   },
   onLoad:function(options){
-    // 生命周期函数--监听页面加载
-     
+    this.getDataHandler('https://api.douban.com/v2/movie/in_theaters','playingData');
+    this.getDataHandler('https://api.douban.com/v2/movie/coming_soon','laterData');
+    this.getDataHandler('https://api.douban.com/v2/movie/top250','topData');
+    wx.showNavigationBarLoading();
   },
-  onReady:function(){
-    // 生命周期函数--监听页面初次渲染完成
-     
+  getDataHandler(url,keyName,startStep) {
+    let obj = {};
+    let that = this;
+    let listData = [];
+    startStep = startStep || 0;
+    wx.request({
+      url:url,
+      data:{},
+      method:'GET',
+      header: {
+        'content-type': 'application/xml'
+      },
+      success(response) {
+        listData = response.data.subjects.slice(startStep, startStep+3);
+        obj[keyName] = listData;
+        console.log(listData);
+        for (let i=0;i<listData.length;i++) {
+          listData[i].integer = Math.floor(listData[i].rating.average);
+          listData[i].late = listData[i].rating.average%listData[i].integer;
+        }
+        that.setData(obj);
+        if( keyName == 'playingData' ){
+          that.setData({
+            startStep: that.data.startStep+3
+          });
+        }
+      },
+      fail() {
+        console.log('fail');
+      },
+      complete() {
+        wx.hideNavigationBarLoading();
+      }
+    }); 
   },
-  onShow:function(){
-    // 生命周期函数--监听页面显示
-     
-  },
-  onHide:function(){
-    // 生命周期函数--监听页面隐藏
-     
-  },
-  onUnload:function(){
-    // 生命周期函数--监听页面卸载
-     
-  },
-  onPullDownRefresh: function() {
-    // 页面相关事件处理函数--监听用户下拉动作
-     
-  },
-  onReachBottom: function() {
-    // 页面上拉触底事件的处理函数
-     
+  onPullDownRefresh(event) {
+    this.getDataHandler('https://api.douban.com/v2/movie/in_theaters','playingData',this.data.startStep);
   },
   onShareAppMessage: function() {
     // 用户点击右上角分享

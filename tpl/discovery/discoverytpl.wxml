@@ -1,8 +1,0 @@
-<import src="../../components/star/star.wxml" />
-<template name="discovery">
-	<view>
-		<image></image>
-		<text>this is template</text>
-		<template is="star"></template>	
-	</view>
-</template>

@@ -1,0 +1,7 @@
+.star{
+	text-align:center;
+}
+.star image{
+	width:20rpx;
+	height:20rpx;
+}

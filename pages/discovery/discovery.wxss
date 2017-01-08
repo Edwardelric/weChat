@@ -1,0 +1,26 @@
+@import "../../components/star/star.wxss";
+.movie{
+	margin:20rpx;	
+	background:#fff;
+}
+.movie-container{
+	padding:0 10rpx;
+}
+.movie .flex text{
+	padding:10rpx;	
+}
+.movie .movie-item{
+	display:flex;
+	flex-direction:column;
+	flex:0 0 33%;
+}
+.movie .movie-item .movie-pic{
+	width:200rpx;
+	height:250rpx;
+}
+.movie .movie-item .title{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:norwap;
+	text-align:center;
+}

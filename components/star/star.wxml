@@ -1,6 +1,6 @@
 <template name="star">
-    <view>
-        <image src=""></image>
-        <text>this is star</text>
+    <view class="star">
+    	<image src="../../images/discovery/star.png"></image>
+    	<text>{{average}}</text>
     </view>
 </template>
