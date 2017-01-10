@@ -1,14 +1,14 @@
 /**index.wxss**/
 .search{
-    padding:16px 0;
-    background:#fff;
+    margin:10rpx 0;
+    padding:10rpx;
+    background:rgba(64,120,192,0.8);
 }
 .search input{
-    flex:1;
-    margin:0 20rpx;
-    padding-left:40rpx;
-    background:#ccc url('/images/tabbar/ring_focus.png') no-repeat left center;
-    font-size:14px;
+    flex:2;
+    padding-left:10rpx;
+    background:none;
+    color:#fff;
 }
 .hot-btn{
     padding:16rpx 0;

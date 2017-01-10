@@ -5,6 +5,7 @@
 }
 .movie-container{
 	padding:0 10rpx;
+	flex-wrap: wrap;
 }
 .movie .flex text{
 	padding:10rpx;	

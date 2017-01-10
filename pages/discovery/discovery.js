@@ -1,22 +1,18 @@
 let app = getApp();
 Page({
   data:{
-    playingData: [],
-    laterData: [],
     topData: [],
-    startStep: 0
+    initialNum: 0,
+    step:9
   },
   onLoad:function(options){
-    this.getDataHandler('https://api.douban.com/v2/movie/in_theaters','playingData');
-    this.getDataHandler('https://api.douban.com/v2/movie/coming_soon','laterData');
-    this.getDataHandler('https://api.douban.com/v2/movie/top250','topData');
     wx.showNavigationBarLoading();
+    this.getDataHandler('https://api.douban.com/v2/movie/top250','topData');
   },
-  getDataHandler(url,keyName,startStep) {
+  getDataHandler(url,keyName) {
     let obj = {};
     let that = this;
     let listData = [];
-    startStep = startStep || 0;
     wx.request({
       url:url,
       data:{},
@@ -25,22 +21,25 @@ Page({
         'content-type': 'application/xml'
       },
       success(response) {
-        listData = response.data.subjects.slice(startStep, startStep+3);
-        obj[keyName] = listData;
+        listData = response.data.subjects.slice(that.data.initialNum, that.data.initialNum+that.data.step);
+        listData = listData.concat(that.data.topData);
         console.log(listData);
-        for (let i=0;i<listData.length;i++) {
-          listData[i].integer = Math.floor(listData[i].rating.average);
-          listData[i].late = listData[i].rating.average%listData[i].integer;
-        }
+        for (let i=0; i<listData.length; i++) {
+          let averageData = listData[i].rating.average/2;
+          let integer = Math.floor(averageData);
+          let decimal = averageData - integer;
+          listData[i].rating.data = [];
+          
+        }  
+        obj[keyName] = listData;
         that.setData(obj);
-        if( keyName == 'playingData' ){
-          that.setData({
-            startStep: that.data.startStep+3
-          });
-        }
+        setTimeout(function(){
+          wx.hideNavigationBarLoading();
+          wx.stopPullDownRefresh();
+        },1000);  
       },
       fail() {
-        console.log('fail');
+        
       },
       complete() {
         wx.hideNavigationBarLoading();
@@ -48,7 +47,11 @@ Page({
     }); 
   },
   onPullDownRefresh(event) {
-    this.getDataHandler('https://api.douban.com/v2/movie/in_theaters','playingData',this.data.startStep);
+    let obj = {};
+    obj.initialNum = this.data.initialNum + this.data.step;
+    this.setData(obj);
+    wx.showNavigationBarLoading();
+    this.getDataHandler('https://api.douban.com/v2/movie/top250','topData');
   },
   onShareAppMessage: function() {
     // 用户点击右上角分享

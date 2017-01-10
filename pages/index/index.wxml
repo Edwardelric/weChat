@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="flex search">
-  <input password type="text" placeholder="搜索问答、文章、话题或用户"/>
-  <icon type="search" />
+  <icon type="search"/>
+  <input type="text" placeholder="搜索问答、文章、话题或用户" placeholder-style="color:#fff"/>
 </view>
 <view class="flex hot-btn">
     <block wx:for="{{hotBtn}}" wx:key="*this">
@@ -20,7 +20,7 @@
 </view>
 <view class="article-list">
     <view wx:for="{{articleList}}" wx:key="*this" class="article-item">
-        <navigator url="/pages/article/article?id={{item.id}}" open-type="redirect">
+        <navigator url="/pages/article/article?id={{item.id}}" >
           <view class="flex">
             <view class="avatar">
               <image src="{{item.avatar.img}}" mode="scaleToFill" class="avatar-image"></image>{{item.avatar.name}}

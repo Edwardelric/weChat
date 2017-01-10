@@ -1,37 +1,11 @@
 <import src="../../components/star/star.wxml" />
-<view class="movie playing-container">
-	<view class="flex">
-		<text>正在上映</text>
-		<text>更多</text>
-	</view>
-	<view class="movie-container flex">
-		<view wx:for="{{playingData}}"  wx:key="*this" class="movie-item">
-			<image src="{{item.images.small}}" mode="scaleToFill" class="movie-pic"></image>
-			<text class="title">{{item.title}}</text>
-			<template is="star" data="{{...item.rating}}"></template>
-		</view>
-	</view>
-</view>
-<view class="movie later-container">
-	<view class="flex">
-		<text>即将上映</text>
-		<text>更多</text>
-	</view>
-	<view class="movie-container flex">
-		<view wx:for="{{laterData}}"  wx:key="*this" class="movie-item">
-			<image src="{{item.images.small}}" mode="scaleToFill" class="movie-pic"></image>
-			<text class="title">{{item.title}}</text>
-			<template is="star" data="{{...item.rating}}"></template>
-		</view>
-	</view>
-</view>
 <view class="movie top-container">
 	<view class="flex">
 		<text>前250</text>
 		<text>更多</text>
 	</view>
-	<view class="movie-container flex">
-		<view wx:for="{{topData}}"  wx:key="*this" class="movie-item">
+	<view class="flex movie-container">
+		<view wx:for="{{topData}}" wx:for-index="idx" wx:for-item="item"  class="movie-item">
 			<image src="{{item.images.small}}" mode="scaleToFill" class="movie-pic"></image>
 			<text class="title">{{item.title}}</text>
 			<template is="star" data="{{...item.rating}}"></template>

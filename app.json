@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/discovery/discovery",
     "pages/index/index",
+    "pages/discovery/discovery",
     "pages/article/article",
     "pages/chat/chat"
   ],
@@ -10,6 +10,7 @@
     "navigationBarBackgroundColor": "#0c5ebc",
     "navigationBarTitleText": "Edward-知乎",
     "navigationBarTextStyle":"#fff",
+    "backgroundColor":"#ccc",
     "enablePullDownRefresh":true
   },
   "tabBar":{
@@ -43,7 +44,7 @@
         "pagePath": "pages/index/index",
         "iconPath": "images/tabbar/book.png",
         "selectedIconPath": "images/tabbar/book_focus.png"
-      }
+      } 
     ]
   },
   "networkTimeout":{
@@ -51,5 +52,6 @@
     "connectSocket": 60000,
     "uploadFile": 60000,
     "downloadFile": 60000
-  }
+  },
+  "debug":true
 }
