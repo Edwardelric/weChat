@@ -5,9 +5,12 @@
 </view>
 <view class="flex hot-btn">
     <block wx:for="{{hotBtn}}" wx:key="*this">
-        <text class="hot-btn-item text-center">{{item}}</text>
+        <text class="hot-btn-item text-center" bindtap="uploadImg" data-index="{{index}}">{{item}}</text>
         <text wx:if="{{index<hotBtn.length-1}}">|</text>
     </block>
+</view>
+<view class="text-center">
+  <image src="{{uploadImgUrl}}" wx:if="{{uploadImgUrl}}" mode="scaleToFill"></image>
 </view>
 <view>
    <swiper autoplay="true" indicator-dots="true" interval="3000" vertical="true">
