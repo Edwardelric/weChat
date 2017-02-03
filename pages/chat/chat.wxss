@@ -1,1 +1,9 @@
 /* pages/chat/chat.wxss */
+.chatwrapper{
+    margin:10px 0;
+    background:#fff;
+}
+.myMap{
+    width:100%;
+    height:1000rpx;
+}

@@ -27,7 +27,6 @@ Page({
         for (let i=0; i<listData.length; i++) {
           let averageData = listData[i].rating.average/2;
           let integer = Math.floor(averageData);
-          let decimal = averageData - integer;
           listData[i].rating.data = [];
           
         }  

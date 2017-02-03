@@ -1,2 +1,5 @@
 <!--pages/chat/chat.wxml-->
-<text>pages/chat/chat.wxml</text>
+<view class="chatwrapper">
+    <text>获取地理位置</text>
+    <map id="myMap" class="myMap" scale="16" longitude="{{longitude}}" latitude="{{latitude}}" show-location></map>
+</view>

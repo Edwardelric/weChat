@@ -31,7 +31,7 @@
         "selectedIconPath": "images/tabbar/discovery_focus.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/chat/chat",
         "iconPath": "images/tabbar/ring.png",
         "selectedIconPath": "images/tabbar/ring_focus.png"
       },
